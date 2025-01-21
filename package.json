@@ -11,7 +11,8 @@
     "test-storybook": "test-storybook",
     "build-storybook": "storybook build",
     "deploy-storybook": "npm run build-storybook",
-    "chromatic": "npx chromatic"
+    "chromatic": "npx chromatic",
+    "postbuild:storybook": "perl -i -p -e 's#<head>#<head>\n\t\t<base href='/storybook/'>#' ./storybook-static/index.html"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",

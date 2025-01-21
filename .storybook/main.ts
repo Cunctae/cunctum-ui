@@ -17,5 +17,6 @@ const config: StorybookConfig = {
     "@storybook/addon-a11y",
     "@chromatic-com/storybook"
   ],
+  staticDirs: ['../public'], // Ensure this directory isn't the same as the output directory
 };
 export default config;
