@@ -1,11 +1,18 @@
+import { Meta } from "@storybook/html";
 import { CardProps, createCard } from "./card";
 
-export default {
+const meta: Meta<CardProps> = {
   title: "CunctumUI/Organisms/Card",
-  parameters: {
-    layout: 'centered',
-  },
+  decorators: [
+    (story) => {
+      const decorator = document.createElement("section");
+      decorator.appendChild(story() as Node);
+      return decorator;
+    },
+  ],
 };
+export default meta;
+
 
 const Template = ({ title, description, ...args }: CardProps) => {
   return createCard({
@@ -21,3 +28,4 @@ Default.args = {
     title: 'Title',
     description: "Description"
 }
+

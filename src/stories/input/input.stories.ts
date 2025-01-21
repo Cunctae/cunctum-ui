@@ -4,7 +4,13 @@ import { InputType } from "./input.types";
 
 const meta: Meta<InputProps> = {
   title: "CunctumUI/Atoms/Input",
-  
+  decorators: [
+    (story) => {
+      const decorator = document.createElement("section");
+      decorator.appendChild(story() as Node);
+      return decorator;
+    },
+  ],
   parameters: {
     layout: "centered",
   },
@@ -71,5 +77,4 @@ export const Date = createStory("Date", "date");
 export const Checkbox = createStory("Checkbox", "checkbox", { checked: true }, ['placeholder']);
 export const Color = createStory("Color", "color", { color: '#ba68c8' }, ['placeholder', 'checked']);
 export const File = createStory("File", "file");
-export const Password = createStory("Password", "password");
 export const Range = createStory("Range", "range", {min: '0' , max: '100'});
