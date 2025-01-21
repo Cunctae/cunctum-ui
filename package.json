@@ -11,7 +11,7 @@
     "test-storybook": "test-storybook",
     "build-storybook": "storybook build",
     "deploy-storybook": "npm run build-storybook",
-    "chromatic": "npx chromatic --project-token chpt_bde4e9175db26e3"
+    "chromatic": "npx chromatic"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",
