@@ -4,7 +4,8 @@ export default create({
   base: "light",
   brandTitle: "Cunctum UI Storybook",
   brandUrl: "https://cunctae.github.io/cunctum-ui/",
-  brandImage: "https://cunctae.com/_astro/c.tj_zdzn-.svg",
+  brandImage: "https://raw.githubusercontent.com/Cunctae/cunctum-ui/refs/heads/main/public/cuntae.png",
+
   brandTarget: "_self",
 
     //
