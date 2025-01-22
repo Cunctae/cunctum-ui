@@ -2,7 +2,7 @@ import { Meta } from "@storybook/html";
 import { CardProps, createCard } from "./card";
 
 const meta: Meta<CardProps> = {
-  title: "CunctumUI/Organisms/Card",
+  title: "Organisms/Card",
   decorators: [
     (story) => {
       const decorator = document.createElement("section");

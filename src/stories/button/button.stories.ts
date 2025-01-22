@@ -3,7 +3,7 @@ import type { Meta, StoryObj, StoryFn } from "@storybook/html";
 
 
 const meta: Meta<ButtonProps> = {
-  title: "CunctumUI/Atoms/Button",
+  title: "Atoms/Button",
   decorators: [
     (story) => {
       const decorator = document.createElement("section");
