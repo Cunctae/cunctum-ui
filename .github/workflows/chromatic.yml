@@ -1,6 +1,9 @@
-name: "Chromatic"
+name: "Chromatic Visual Testing"
 
-on: push
+on:
+  push:
+    paths:
+      - "src/**" # Only trigger when files inside /src are modified
 
 jobs:
   chromatic:
@@ -15,10 +18,8 @@ jobs:
         with:
           node-version: 22.12.0
       - name: Install dependencies
-        # ⚠️ See your package manager's documentation for the correct command to install dependencies in a CI environment.
         run: npm ci
       - name: Run Chromatic
         uses: chromaui/action@latest
         with:
-          # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
