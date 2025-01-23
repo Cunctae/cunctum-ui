@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/html";
+import { Meta, StoryObj } from "@storybook/html";
 import { CardProps, createCard } from "./card";
 
 const meta: Meta<CardProps> = {
@@ -28,12 +28,12 @@ const meta: Meta<CardProps> = {
       defaultValue: {
         summary: "Description",
       },
-    },
-
+    }
   },
 };
 export default meta;
 
+type Story = StoryObj<CardProps>;
 
 const Template = ({ title, description, ...args }: CardProps) => {
   return createCard({
@@ -43,10 +43,17 @@ const Template = ({ title, description, ...args }: CardProps) => {
   });
 };
 
-export const Default: any = Template.bind({})
+export const Default: Story = {
+  render: Template,
+};
 
 Default.args = {
     title: 'Title',
-    description: "Description"
+    description: "Description",
+    avatarProps: {
+      iconType: 'image',
+      size: 'medium'
+    },
+    
 }
 

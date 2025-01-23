@@ -1,0 +1,25 @@
+@import "../../style.css";
+
+.label {
+  color: var(--Black);
+  margin: 0;
+}
+
+.label--h1 {
+  font-size: 40px;
+}
+.label--h2 {
+  font-size: 32px;
+}
+.label--p18 {
+  font-size: 18px;
+}
+.label--p16 {
+  font-size: 16px;
+}
+.label--p14 {
+  font-size: 14px;
+}
+.label--p12 {
+  font-size: 12px;
+}

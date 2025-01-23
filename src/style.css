@@ -163,12 +163,13 @@
   --Success-50: #e0f7fa;
   --Success-300: #4dd0e1;
   --Success-600: #00acc1;
+  
+  --H1: 40px;
+  --H2: 32px;
   --Body-12: 12px;
   --Body-14: 14px;
   --Body-16: 16px;
   --Body-18: 18px;
-  --H1: 40px;
-  --H2: 32px;
 
   font-family: "Athabasca", sans-serif;
   font-weight: 400; /* Regular */

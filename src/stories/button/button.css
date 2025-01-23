@@ -8,6 +8,7 @@
     transition: 0.2s;
 }
 
+
 .button:hover {
     box-shadow: -4px 4px 0px var(--Black);
     transform: translate(4px);
@@ -20,12 +21,12 @@
 }
 
 .button--filled {
-    background-color: var(--Primary-300);
+    background-color: var(--Primary-600);
     color: var(--White);
 }
 
 .button--filled:active {
-    background-color: var(--Primary-600);
+    background-color: var(--Primary-300);
     color: var(--White);
 }
 
