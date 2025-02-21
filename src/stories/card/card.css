@@ -1,0 +1,66 @@
+@import '../../style.css';
+
+.wrapper {
+    resize: horizontal;
+    overflow: auto;
+    container-name: card;
+    container-type: inline-size;
+    padding: 0 8px 8px 0;
+}
+
+.card {
+    border: 2px solid var(--Black);
+    border-radius: 12px;
+    background-color: var(--White);
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.2s;
+    gap: 16px;
+}
+
+.card:hover {
+    box-shadow: -4px 4px 0px var(--Black);
+    transform: translate(4px);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.card:active {
+    transition: 0.2s;
+    background-color: var(--Primary-50);
+    cursor: pointer;
+}
+
+.card__avatar {
+    height: 70px;
+    width: 70px;
+    background-color: var(--Info-300);
+    border-radius: 50%
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  padding: 0;
+}
+
+.card__content h3, p {
+    margin: 0;
+}
+
+@container card (max-width: 400px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .card__content {
+        align-items: center;
+    }
+}
+
+.card__small {}
+.card__medium {}

@@ -1,0 +1,184 @@
+/* Regular */
+@font-face {
+  font-family: "Athabasca";
+  src: url("fonts/Athabasca Rg.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Athabasca";
+  src: url("fonts/Athabasca Bd.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Book */
+@font-face {
+  font-family: "Athabasca";
+  src: url("fonts/Athabasca Bk.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Italic */
+@font-face {
+  font-family: "Athabasca";
+  src: url("fonts/Athabasca It.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: "Athabasca";
+  src: url("fonts/Athabasca Bd It.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Condensed Regular */
+@font-face {
+  font-family: "Athabasca";
+  src: url("fonts/Athabasca Cd Rg.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Condensed Bold */
+@font-face {
+  font-family: "Athabasca";
+  src: url("fonts/Athabasca Cd Bd.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Condensed Italic */
+@font-face {
+  font-family: "Athabasca";
+  src: url("fonts/Athabasca Cd It.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Condensed Bold Italic */
+@font-face {
+  font-family: "Athabasca";
+  src: url("fonts/Athabasca Cd Bd It.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Condensed Light */
+@font-face {
+  font-family: "Athabasca";
+  src: url("fonts/Athabasca Cd Lt.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Condensed Extra Bold */
+@font-face {
+  font-family: "Athabasca";
+  src: url("fonts/Athabasca Cd Eb.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Extended Regular */
+@font-face {
+  font-family: "Athabasca";
+  src: url("fonts/Athabasca Ex Rg.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Extended Bold */
+@font-face {
+  font-family: "Athabasca";
+  src: url("fonts/Athabasca Ex Bd.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Extended Italic */
+@font-face {
+  font-family: "Athabasca";
+  src: url("fonts/Athabasca Ex It.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Extended Bold Italic */
+@font-face {
+  font-family: "Athabasca";
+  src: url("fonts/Athabasca Ex Bd It.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Extended Light */
+@font-face {
+  font-family: "Athabasca";
+  src: url("fonts/Athabasca Ex Lt.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Extra Bold */
+@font-face {
+  font-family: "Athabasca";
+  src: url("fonts/Athabasca Eb.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Extra Light */
+@font-face {
+  font-family: "Athabasca";
+  src: url("fonts/Athabasca El.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+:root {
+  --Primary-300: #ba68c8;
+  --Primary-50: #f3e5f5;
+  --Primary-600: #8e24aa;
+  --Black: #000000;
+  --White: #ffffff;
+  --Error-50: #ffebee;
+  --Error-300: #e57373;
+  --Error-600: #e53935;
+  --Info-50: #e3f2fd;
+  --Info-300: #64b5f6;
+  --Info-600: #1e88e5;
+  --Neutral-50: #fafafa;
+  --Neutral-300: #e0e0e0;
+  --Neutral-600: #757575;
+  --Warning-50: #fff3e0;
+  --Warning-300: #ffb74d;
+  --Warning-600: #fb8c00;
+  --Success-50: #e0f7fa;
+  --Success-300: #4dd0e1;
+  --Success-600: #00acc1;
+  --Body-12: 12px;
+  --Body-14: 14px;
+  --Body-16: 16px;
+  --Body-18: 18px;
+  --H1: 40px;
+  --H2: 32px;
+
+  font-family: "Athabasca", sans-serif;
+  font-weight: 400; /* Regular */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button, input {
+  all: unset;
+}

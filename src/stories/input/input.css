@@ -1,0 +1,167 @@
+@import "../../style.css";
+
+input {
+  all: unset;
+}
+
+.input {
+  border: 2px solid var(--Black);
+  border-radius: 12px;
+  color: var(--Black);
+  cursor: pointer;
+  transition: 0.2s;
+  padding: 8px;
+}
+
+.input:hover {
+  box-shadow: -4px 4px 0px var(--Black);
+  transform: translate(4px);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.input:active {
+  transition: 0.2s;
+  background-color: var(--Primary-50);
+  cursor: pointer;
+}
+
+.input--range {
+  border: none;
+  transition: none;
+  transform: none;
+  outline: none;
+  overflow: hidden;
+  padding: 0;
+  transition: 0.2s;
+}
+
+.input--range:hover {
+  background-color: none;
+  transform: none;
+  cursor: grab;
+  box-shadow: none;
+  background-color: none;
+  transition: 0.2s;
+}
+
+.input--range:active {
+  transform: none;
+  background-color: transparent;
+  transform: none;
+  cursor: grabbing;
+  transition: 0.2s;
+}
+
+/* Track: webkit browsers */
+.input--range::-webkit-slider-runnable-track {
+  height: 15px;
+  background: var(--Primary-50);
+  border-radius: 16px;
+}
+
+/* Track: Mozilla Firefox */
+.input--range::-moz-range-track {
+  height: 15px;
+  background: var(--Primary-50);
+  border-radius: 16px;
+}
+
+/* Thumb: webkit */
+.input--range::-webkit-slider-thumb {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  height: 15px;
+  width: 15px;
+  background-color: var(--White);
+  border-radius: 50%;
+  border: 2px solid var(--Primary-300);
+  /*  slider progress trick  */
+  box-shadow: -407px 0 0 400px var(--Primary-300);
+}
+
+/* Thumb: Firefox */
+.input--range::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background-color: var(--White);
+  border-radius: 50%;
+  border: 1px solid var(--Primary-300);
+  /*  slider progress trick  */
+  box-shadow: -407px 0 0 400px var(--Primary-300);
+}
+
+.input--range::-moz-range-thumb:hover {
+  background-color: var(--Primary-600);
+  border-color: var(--Primary-600);
+  cursor: grab;
+  transition: all 0.2s ease-in-out;
+}
+
+.input--range::-webkit-slider-thumb:hover {
+  background-color: var(--Primary-600);
+  border-color: var(--Primary-600);
+  cursor: grab;
+  transition: all 0.2s ease-in-out;
+}
+
+/*  Checkbox  */
+
+.input--checkbox:hover {
+  background: var(--Primary-50);
+}
+
+.input--checkbox:checked {
+  background-color: var(--Primary-300);
+}
+
+/*  Color  */
+
+.input--color {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 2px solid var(--Black);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input--color::-webkit-color-swatch-wrapper {
+  padding: 4px;
+}
+
+.input--color::-webkit-color-swatch {
+  border: none;
+  border-radius: 2px;
+}
+
+.input--color::-moz-color-swatch {
+  border: none;
+  border-radius: 2px;
+}
+
+/*  File  */
+
+.input--file {
+    text-align: center;
+    width: 150px;
+    transition: 0.2s;
+    text-align: center;
+    margin: auto;
+    text-overflow: ellipsis;
+}
+
+.input--file:hover {
+    background: var(--Primary-50);
+    transition: 0.2s;
+  }
+
+.input--file::file-selector-button {
+    display: none;
+}
+

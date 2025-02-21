@@ -1,0 +1,40 @@
+@import '../../style.css';
+
+.button {
+    border: 2px solid var(--Black);
+    border-radius: 12px;
+    color: var(--Black);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button:hover {
+    box-shadow: -4px 4px 0px var(--Black);
+    transform: translate(4px);
+    transition: 0.2s;
+}
+
+.button:active {
+    transition: 0.2s;
+    background-color: var(--Primary-50);
+}
+
+.button--filled {
+    background-color: var(--Primary-300);
+}
+
+.button--outlined {
+    background-color: var(--White);
+}
+
+.button--small {
+    padding: 8px 16px;
+}
+
+.button--medium {
+    padding: 12px 24px;
+}
+
+.button--large {
+    padding: 16px 32px;
+}
