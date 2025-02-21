@@ -1,0 +1,18 @@
+@import "../../style.css";
+
+.separator {
+  border: none;
+  background-color: var(--Primary-300);
+}
+
+.separator--vertical {
+  height: 1px;
+  width: 100%;
+  margin: 20px 0;
+
+}
+.separator--horizontal {
+  height: 100px;
+  width: 1px;
+  margin: 0 20px;
+}
