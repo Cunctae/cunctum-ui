@@ -1,0 +1,69 @@
+@import '../../style.css';
+
+
+.avatar {
+    height: 70px;
+    width: 70px;
+    background-color: var(--Info-300);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.avatar:hover {
+    box-shadow: -4px 4px 0px var(--Black);
+    transform: translate(4px);
+    transition: 0.2s;
+}
+
+.avatar:active {
+    transition: 0.2s;
+    background-color: var(--Info-600);
+}
+
+.avatar--small {
+    width: 32px;
+    height: 32px;
+}
+
+.avatar--medium {
+    width: 64px;
+    height: 64px;
+}
+
+.avatar--large {
+    width: 98px;
+    height: 98px;
+}
+
+.avatar__icon {
+    margin: 0;
+}
+
+.avatar__icon--emoji--small {
+    font-size: 16px;
+}
+
+.avatar__icon--emoji--medium {
+    font-size: 32px;
+}
+
+.avatar__icon--emoji--large {
+    font-size: 48px;
+}
+
+.avatar__icon--image--small {
+    width: 16px;
+}
+
+.avatar__icon--image--medium {
+    width: 32px;
+}
+
+.avatar__icon--image--large {
+    width: 48px;
+}
+

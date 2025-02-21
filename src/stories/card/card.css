@@ -33,13 +33,6 @@
     cursor: pointer;
 }
 
-.card__avatar {
-    height: 70px;
-    width: 70px;
-    background-color: var(--Info-300);
-    border-radius: 50%
-}
-
 .card__content {
   display: flex;
   flex-direction: column;
