@@ -2,6 +2,31 @@ import { Meta, StoryObj } from "@storybook/html";
 import { InputProps, createInput } from "./input";
 import { InputType } from "./input.types";
 
+const inputTypeOptions: InputType[] = [
+  "button",
+  "checkbox",
+  "color",
+  "date",
+  "datetime-local",
+  "email",
+  "file",
+  "hidden",
+  "image",
+  "month",
+  "number",
+  "password",
+  "radio",
+  "range",
+  "reset",
+  "search",
+  "submit",
+  "tel",
+  "text",
+  "time",
+  "url",
+  "week",
+];
+
 const meta: Meta<InputProps> = {
   title: "Atoms/Input",
   decorators: [
@@ -15,26 +40,50 @@ const meta: Meta<InputProps> = {
     layout: "centered",
   },
   argTypes: {
-    min: {
-      control: 'number',
+    placeholder: {
+      control: "text",
+      if: { arg: "type", eq: "text" },
     },
-    max: {
-      control: 'number',
+    type: {
+      control: "select",
+      options: inputTypeOptions,
+      table: {
+        defaultValue: {
+          summary: "text",
+        },
+      },
+    },
+    value: {
+      control: "number",
+      description: "Define the current value of the range",
+      type: "string",
+      table: {
+        defaultValue: {
+          summary: "10",
+        },
+      },
+      if: { arg: "type", eq: "range" },
     },
     checked: {
       control: "boolean",
       options: [true, false],
-      if: { arg: 'type', eq: 'checkbox' }
+      if: { arg: "type", eq: "checkbox" },
+      table: {
+        defaultValue: {
+          summary: "false",
+        },
+      },
     },
     color: {
       control: "color",
-      if: { arg: 'type', eq: 'color' }
+      if: { arg: "type", eq: "color" },
+      table: {
+        defaultValue: {
+          summary: "#943e0d",
+        },
+      },
     },
-    placeholder: {
-      control: "text",
-      if: { arg: 'type', neq: 'color' }
-    }
-  }
+  },
 };
 
 export default meta;
@@ -48,7 +97,7 @@ const Template = ({ ...args }: InputProps) => {
 };
 
 const createStory = (
-  name: string, 
+  name: string,
   type: InputType,
   defaultArgs: Partial<InputProps> = {},
   excludeProps: (keyof InputProps)[] = []
@@ -58,13 +107,13 @@ const createStory = (
     args: {
       placeholder: name,
       type,
-      ...defaultArgs
-    }
+      ...defaultArgs,
+    },
   };
 
   if (excludeProps.length) {
     story.argTypes = {};
-    excludeProps.forEach(prop => {
+    excludeProps.forEach((prop) => {
       story.argTypes![prop] = { table: { disable: true } };
     });
   }
@@ -74,7 +123,16 @@ const createStory = (
 
 export const Text = createStory("Text", "text");
 export const Date = createStory("Date", "date");
-export const Checkbox = createStory("Checkbox", "checkbox", { checked: true }, ['placeholder']);
-export const Color = createStory("Color", "color", { color: '#ba68c8' }, ['placeholder', 'checked']);
+export const Checkbox = createStory("Checkbox", "checkbox", { checked: true }, [
+  "placeholder",
+]);
+export const Color = createStory("Color", "color", { color: "#A80A00" }, [
+  "placeholder",
+  "checked",
+]);
 export const File = createStory("File", "file");
-export const Range = createStory("Range", "range", {min: '0' , max: '100'});
+export const Range = createStory("Range", "range", {
+  value: "10",
+  min: "0",
+  max: "10",
+});

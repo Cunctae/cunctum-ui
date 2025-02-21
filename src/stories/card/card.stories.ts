@@ -10,6 +10,27 @@ const meta: Meta<CardProps> = {
       return decorator;
     },
   ],
+  argTypes: {
+    title: {
+      control: "text",
+      description: "Title of the card",
+      type: 'string',
+      table: {
+        defaultValue: {
+          summary: "Title",
+        },
+      },
+    },
+    description: {
+      control: "text",
+      description: "Description of the card",
+      type: 'string',
+      defaultValue: {
+        summary: "Description",
+      },
+    },
+
+  },
 };
 export default meta;
 

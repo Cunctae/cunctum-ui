@@ -21,6 +21,12 @@
 
 .button--filled {
     background-color: var(--Primary-300);
+    color: var(--White);
+}
+
+.button--filled:active {
+    background-color: var(--Primary-600);
+    color: var(--White);
 }
 
 .button--outlined {

@@ -9,6 +9,7 @@ export interface InputProps {
   min: string;
   max: string;
   step: string;
+  value: string;
 }
 
 export const createInput = ({
@@ -19,6 +20,7 @@ export const createInput = ({
   min,
   max,
   step,
+  value
 }: InputProps) => {
   const input = document.createElement("input");
 
@@ -40,6 +42,7 @@ export const createInput = ({
     input.max = max;
     input.step = step;
     input.role = 'slider'
+    input.value = value
   }
 
   input.className = ["input", `input--${type}`].join(" ");
