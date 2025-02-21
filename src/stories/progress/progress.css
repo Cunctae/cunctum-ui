@@ -1,0 +1,72 @@
+@import "../../style.css";
+
+progress {
+    border-radius: 8px;
+    height: 8px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: var(--Error-50);
+    border-radius: 8px;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--Primary-300);
+    border-radius: 8px;
+}
+
+progress::-moz-progress-bar {
+    border-radius: 8px;
+    height: 8px;
+}
+
+/* Determinate: */
+
+progress[value] {
+    border-radius: 8px;
+    height: 8px;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: var(--Error-50);
+    border-radius: 8px;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: var(--Primary-300);
+    border-radius: 8px;
+}
+
+progress[value]::-moz-progress-bar {
+    border-radius: 8px;
+    height: 8px;
+}
+
+/* Indeterminate: */
+
+progress:not([value]) {
+    border-radius: 8px;
+    height: 8px;
+}
+
+progress:not([value])::-webkit-progress-bar {
+    background:
+        linear-gradient(-45deg, transparent 33%, var(--Black) 33%, var(--Black) 66%, transparent 66%),
+        var(--Primary-300);
+    background-size: 2.5em 1.25em;
+      animation: animatestripes 5s linear infinite;
+}
+
+progress:not([value])::-webkit-progress-value {
+    background-color: var(--Primary-300);
+    border-radius: 8px;
+}
+
+progress:not([value])::-moz-progress-bar {
+    border-radius: 8px;
+    height: 8px;
+}
+
+@keyframes animatestripes {
+    100% { background-position: -40px 0;  }
+ }
