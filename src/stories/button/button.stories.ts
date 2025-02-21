@@ -1,14 +1,19 @@
 import { ButtonProps, createButton } from "./button";
 import type { Meta, StoryObj, StoryFn } from "@storybook/html";
 
+
 const meta: Meta<ButtonProps> = {
   title: "CunctumUI/Atoms/Button",
-  parameters: {
-    layout: 'centered',
-  },
+  decorators: [
+    (story) => {
+      const decorator = document.createElement("section");
+      decorator.appendChild(story() as Node);
+      return decorator;
+    },
+  ],
   argTypes: {
     size: {
-      control: "select",
+      control: "inline-radio",
       description: "Size of the button",
       options: ["small", "medium", "large"],
     },
@@ -20,6 +25,10 @@ const meta: Meta<ButtonProps> = {
       control: "inline-radio",
       description: "The style of the button",
       options: ["filled", "outlined"],
+    },
+    onClick: {
+      description: "Event",
+      action: 'clicked'
     },
   },
 };

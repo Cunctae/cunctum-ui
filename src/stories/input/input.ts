@@ -16,27 +16,30 @@ export const createInput = ({
   type = "text",
   checked = true,
   color,
-  min, max,
-  step
+  min,
+  max,
+  step,
 }: InputProps) => {
   const input = document.createElement("input");
 
-  input.role = "input";
   input.placeholder = placeholder;
   input.type = type;
-  if (input.type === "radio" || "checkbox") {
+  input.ariaLabel = `Input of type ${type}`
+
+  if (input.type === "checkbox") {
     input.checked = checked;
+    input.role = 'checkbox'
   }
 
   if (input.type === "color") {
     input.value = color || "#ba68c8";
   }
-
+  
   if (input.type === "range") {
     input.min = min;
     input.max = max;
     input.step = step;
-
+    input.role = 'slider'
   }
 
   input.className = ["input", `input--${type}`].join(" ");
