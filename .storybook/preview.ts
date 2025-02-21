@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/html";
+import '../src/style.css';
 
 const customViewports = {
   xs: {

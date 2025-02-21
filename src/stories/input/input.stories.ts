@@ -3,7 +3,7 @@ import { InputProps, createInput } from "./input";
 import { InputType } from "./input.types";
 
 const meta: Meta<InputProps> = {
-  title: "CunctumUI/Atoms/Input",
+  title: "Atoms/Input",
   decorators: [
     (story) => {
       const decorator = document.createElement("section");
