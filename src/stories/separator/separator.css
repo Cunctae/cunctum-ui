@@ -6,13 +6,13 @@
 }
 
 .separator--vertical {
-  height: 1px;
+  height: 2px;
   width: 100%;
   margin: 20px 0;
 
 }
 .separator--horizontal {
   height: 100px;
-  width: 1px;
+  width: 2px;
   margin: 0 20px;
 }

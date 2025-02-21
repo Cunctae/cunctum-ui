@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/html";
 import { IconProps, createIcon } from "./icon";
+import { coordinatesPaths } from "./icon.paths";
 
 const meta: Meta<IconProps> = {
   title: "Atoms/Icon",
@@ -26,5 +27,7 @@ export const Default: Story = {
 };
 
 Default.args = {
-
+  boxHeight: '15',
+  boxWidth: '15',
+  coordinates: coordinatesPaths['hamburger']
 };
