@@ -9,7 +9,7 @@ const meta: Meta<ProgressProps> = {
             decorator.appendChild(story() as Node);
             return decorator;
         },
-    ],
+    ]
 };
 export default meta;
 

@@ -10,6 +10,14 @@ const meta: Meta<SeparatorProps> = {
       return decorator;
     },
   ],
+  argTypes: {
+    orientation: {
+      control: "inline-radio",
+      description: "Ortientation",
+      options: ["vertical", "horizontal" ],
+      type: 'string',
+    },
+  },
 };
 export default meta;
 
