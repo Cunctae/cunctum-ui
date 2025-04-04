@@ -11,6 +11,18 @@ const meta: Meta<IconProps> = {
       return decorator;
     },
   ],
+  argTypes: {
+    coordinates: {
+      control: { type: 'select' },
+      options: Object.keys(coordinatesPaths),
+      mapping: {
+        hamburger:coordinatesPaths['hamburger'],
+        ['arrow-left']:coordinatesPaths['arrow-left'],
+        x:coordinatesPaths['x'],
+
+      },
+    },
+  }
 };
 export default meta;
 
@@ -27,7 +39,7 @@ export const Default: Story = {
 };
 
 Default.args = {
-  boxHeight: '15',
-  boxWidth: '15',
+  height: '15',
+  width: '15',
   coordinates: coordinatesPaths['hamburger']
 };
