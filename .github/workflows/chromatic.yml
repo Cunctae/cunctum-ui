@@ -1,9 +1,6 @@
 name: "Chromatic Visual Testing"
 
-on:
-  push:
-    paths:
-      - "src/**" # Only trigger when files inside /src are modified
+on: push
 
 jobs:
   chromatic:

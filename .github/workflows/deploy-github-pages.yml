@@ -3,9 +3,7 @@ name: Build and Publish CunctumUI to GitHub Pages
 on:
   push:
     branches:
-      - "main" # Only trigger on the main branch
-    paths:
-      - "src/**" # Only trigger when files inside /src are modified
+      - 'main'
 
 permissions:
   contents: read
