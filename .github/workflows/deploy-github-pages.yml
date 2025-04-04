@@ -1,9 +1,9 @@
-name: Build and Publish Storybook to GitHub Pages
+name: Build and Publish CunctumUI to GitHub Pages
 
 on:
   push:
     branches:
-      - 'main'
+      - "main"
 
 permissions:
   contents: read
@@ -13,16 +13,21 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
+
       - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:
-          install_command: npm install
+          install_command: npm ci
           build_command: npm run build-storybook
           path: storybook-static
           checkout: false
