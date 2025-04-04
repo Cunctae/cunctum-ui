@@ -19,7 +19,7 @@ const meta: Meta<IconProps> = {
         hamburger:coordinatesPaths['hamburger'],
         ['arrow-left']:coordinatesPaths['arrow-left'],
         x:coordinatesPaths['x'],
-
+        search:coordinatesPaths['search']
       },
     },
   }
