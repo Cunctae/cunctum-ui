@@ -1,4 +1,4 @@
-import "@cunctae/cunctum-ui/style.css";
+import "../style.css";
 import "./landing.css";
 
 import {
@@ -12,7 +12,7 @@ import {
   createSeparator,
   Orientation,
   coordinatesPaths,
-} from "@cunctae/cunctum-ui";
+} from "../index";
 
 const app = document.getElementById("app")!;
 
