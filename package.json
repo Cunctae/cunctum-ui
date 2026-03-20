@@ -25,6 +25,9 @@
     "type": "git",
     "url": "https://github.com/Cunctae/cunctum-ui"
   },
+  "publishConfig": {
+    "@cunctae:registry": "https://npm.pkg.github.com"
+  },
   "license": "MIT",
   "keywords": [
     "ui",
