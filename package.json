@@ -1,15 +1,34 @@
 {
-  "name": "cunctum-ui",
+  "name": "@cunctae/cunctum-ui",
   "version": "1.0.0",
   "type": "module",
+  "files": ["dist"],
+  "main": "./dist/cunctum-ui.umd.cjs",
+  "module": "./dist/cunctum-ui.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/cunctum-ui.js",
+      "require": "./dist/cunctum-ui.umd.cjs"
+    },
+    "./style.css": "./dist/cunctum-ui.css"
+  },
   "author": {
     "name": "Juan Felipe Rada",
     "email": "radapls8@gmail.com",
     "url": "https://github.com/Radapls"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cunctae/cunctum-ui"
+  },
+  "license": "MIT",
+  "keywords": ["ui", "components", "vanilla", "typescript"],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm run build",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "storybook-docs": "storybook dev --docs",
