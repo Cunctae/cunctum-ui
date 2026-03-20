@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--White);
+  color: var(--Black);
+  min-height: 100vh;
+}
+
+.landing {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+.landing__hero {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.landing__hero img {
+  width: 120px;
+  margin-bottom: 24px;
+}
+
+.landing__hero h1 {
+  font-size: var(--H1);
+  margin-bottom: 8px;
+}
+
+.landing__hero p {
+  font-size: var(--Body-18);
+  color: var(--Neutral-600);
+}
+
+.landing__section {
+  margin-bottom: 48px;
+}
+
+.landing__section-title {
+  font-size: var(--H2);
+  margin-bottom: 24px;
+  color: var(--Primary-300);
+  border-bottom: 1px solid var(--Neutral-300);
+  padding-bottom: 8px;
+}
+
+.landing__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.landing__row--vertical {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Override card wrapper resize behavior from the library (meant for Storybook) */
+.landing__row .wrapper {
+  resize: none;
+  overflow: visible;
+  flex: 1;
+  min-width: 250px;
+}
+
+.landing__storybook-link {
+  margin-top: 16px;
+}
+
+.landing__storybook-link > a {
+  text-decoration: none;
+}
+

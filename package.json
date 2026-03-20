@@ -2,7 +2,9 @@
   "name": "@cunctae/cunctum-ui",
   "version": "1.0.0",
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/cunctum-ui.umd.cjs",
   "module": "./dist/cunctum-ui.js",
   "types": "./dist/index.d.ts",
@@ -24,10 +26,16 @@
     "url": "https://github.com/Cunctae/cunctum-ui"
   },
   "license": "MIT",
-  "keywords": ["ui", "components", "vanilla", "typescript"],
+  "keywords": [
+    "ui",
+    "components",
+    "vanilla",
+    "typescript"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build && tsc -p tsconfig.build.json",
+    "build-landing": "vite build --config vite.landing.config.ts",
     "prepublishOnly": "npm run build",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -56,6 +64,7 @@
     "vite": "^6.2.0"
   },
   "dependencies": {
+    "@cunctae/cunctum-ui": "^1.0.0",
     "@storybook/test-runner": "^0.22.0"
   }
 }

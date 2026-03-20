@@ -10,11 +10,16 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - uses: actions/checkout@v4
@@ -25,9 +30,20 @@ jobs:
         with:
           node-version: "20"
 
-      - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
+      - run: npm ci
+
+      # Build landing page → dist-landing/
+      - run: npm run build-landing
+
+      # Build Storybook → storybook-static/
+      - run: npm run build-storybook
+
+      # Move Storybook into landing output as a subfolder
+      - run: mv storybook-static dist-landing/storybook
+
+      - uses: actions/upload-pages-artifact@v3
         with:
-          install_command: npm ci
-          build_command: npm run build-storybook
-          path: storybook-static
-          checkout: false
+          path: dist-landing
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
