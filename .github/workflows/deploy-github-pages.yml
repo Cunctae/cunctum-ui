@@ -36,7 +36,9 @@ jobs:
       - run: npm run build-landing
 
       # Build Storybook → storybook-static/
-      - run: npm run build-storybook
+      - run: npx storybook build --output-dir storybook-static
+        env:
+          STORYBOOK_BASE: /cunctum-ui/storybook/
 
       # Move Storybook into landing output as a subfolder
       - run: mv storybook-static dist-landing/storybook

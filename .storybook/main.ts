@@ -18,10 +18,14 @@ const config: StorybookConfig = {
     "@chromatic-com/storybook",
   ],
   staticDirs: ["../public"],
+  viteFinal: (config) => {
+    config.base = process.env.STORYBOOK_BASE || "/";
+    return config;
+  },
   managerHead: (head) => `
   ${head}
-  <link rel="preload" href="/fonts/Athabasca Rg.otf" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="preload" href="fonts/Athabasca Rg.otf" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 `,
 };
 export default config;
